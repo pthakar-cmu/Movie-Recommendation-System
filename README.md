@@ -1,4 +1,3 @@
 # movie-prediction-group-project-avengers
-movie-prediction-group-project-avengers created by GitHub Classroom
 
-This is the README file.
+### See detailed information in milestone1/readme.md

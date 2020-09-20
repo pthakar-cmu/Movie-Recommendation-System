@@ -24,8 +24,11 @@ Run following commands to clean data.
 Here, we use Scrapy to crawl web pages about user and movie info. Results are in user_info.txt and movie_info.txt. Further, user)info.txt is converted into .csv format (user_info.csv).
 
 Run following commands to collect data in get_user_info (outer) folder.
+
 	scrapy crawl userInfo
+	
 Run following commands to collect data in get_movie_info (outer) folder.
+
 	scrapy crawl movieInfo
 
 Run following commands to get .csv.

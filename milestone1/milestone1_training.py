@@ -10,21 +10,16 @@ import csv
 
 start_time = time.time()
 
-rating_user = []
-rating_item = []
-rating = []
-
-num_file = 5
+rating_user, rating_item, rating = [], [], []
+num_file = 474
 
 for ind_file in range(num_file):
   rating_file_name = "part-"
   for ind_zero in range(5 - len(str(ind_file))):
     rating_file_name += "0"
   rating_file_name += str(ind_file)
-  #print("rating file name:" + rating_file_name)
   rating_file = open('KafkaData/userRating/' + rating_file_name, "r")
   rating_file_content = rating_file.readlines()
-  #print("num of lines of rating:" , len(rating_file_content))
   for ind_line in range(len(rating_file_content)):
     seg = re.findall(r"'[ a-zA-Z._\-+*0-9]+'", rating_file_content[ind_line])
 
@@ -42,18 +37,12 @@ for ind_file in range(num_file):
 
   rating_file.close()
 
+user_set = list(set(rating_user))
+movie_set = list(set(rating_item))
 
-#print("num of user on rating:" , len(rating_user))
-#print("num of item on rating:" , len(rating_item))
-#print("num of rating:" , len(rating))
-
-
-with open('training_data.csv', 'w') as f:
-    # using csv.writer method from CSV package
+with open('movie_names.csv', 'w') as f:
     write = csv.writer(f)
-    write.writerows([rating_user,rating_item])
-
-#print("--- %s seconds ---" % (time.time() - start_time))
+    write.writerows([movie_set])
 
 ratings_dict = {
     "item": rating_item,
@@ -61,29 +50,33 @@ ratings_dict = {
     "rating": rating
 }
 
-
 df = pd.DataFrame(ratings_dict)
 reader = Reader(rating_scale=(1, 5))
-
-# Loads Pandas dataframe3
 data = Dataset.load_from_df(df[["user", "item", "rating"]], reader)
-
-# To use user-based cosine similarity
-sim_options = {
+sim_options = {                       # To use user-based cosine similarity
     "name": "cosine",
     "user_based": True,
 }
 algo = KNNWithMeans(sim_options=sim_options)
 
-# Train
 trainingSet = data.build_full_trainset()
 algo.fit(trainingSet)
 
+final_prediction = {}
+for i in range(len(user_set)):
+  predict_dict = {}
+  for ind in range(len(movie_set)):
+    prediction = algo.predict(user_set[i], movie_set[ind])
+    predict_dict[prediction.est] = movie_set[ind]
+  ind = 1
+  result = []
+  for score in sorted(predict_dict, reverse=True):
+    result.append(predict_dict[score])
+    ind += 1
+    if ind > 20:
+      final_prediction[user_set[i]] = result
+      break
 
-filename = 'finalized_model.sav'
-joblib.dump(algo, filename)
-
-#print("--- %s seconds ---" % (time.time() - start_time))
-
-
-
+with open('Prediction_data.csv', 'w') as f:
+    for key in final_prediction.keys():
+        f.write("%s, %s\n" % (key, final_prediction[key]))

@@ -45,7 +45,7 @@ First, train the model with dataset once:
 
 	python3 milestone1_training.py
 
-It will generate a trained model file and combine all training data into a single file.
+It will generate recommended movies for all users in training dataset called "Prediction_data.csv" and a list of movies in training dataset called "movie_names.csv".
 
 Then run predictions repeatly by accepting user ids:
 

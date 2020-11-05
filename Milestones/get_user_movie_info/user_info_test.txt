@@ -1,0 +1,163 @@
+{"user_id":67028,"age":30,"occupation":"academic/educator","gender":"F"}
+{"user_id":105939,"age":26,"occupation":"homemaker","gender":"M"}
+{"user_id":108994,"age":33,"occupation":"college/grad student","gender":"F"}
+{"user_id":100175,"age":30,"occupation":"other or not specified","gender":"M"}
+{"user_id":104380,"age":30,"occupation":"sales/marketing","gender":"M"}
+{"user_id":10728,"age":34,"occupation":"executive/managerial","gender":"M"}
+{"user_id":11010,"age":31,"occupation":"college/grad student","gender":"M"}
+{"user_id":109171,"age":15,"occupation":"K-12 student","gender":"M"}
+{"user_id":10275,"age":32,"occupation":"college/grad student","gender":"M"}
+{"user_id":111627,"age":28,"occupation":"college/grad student","gender":"M"}
+{"user_id":111239,"age":72,"occupation":"retired","gender":"F"}
+{"user_id":112761,"age":20,"occupation":"K-12 student","gender":"M"}
+{"user_id":115309,"age":31,"occupation":"college/grad student","gender":"M"}
+{"user_id":117021,"age":31,"occupation":"college/grad student","gender":"M"}
+{"user_id":11709,"age":32,"occupation":"scientist","gender":"M"}
+{"user_id":114959,"age":32,"occupation":"programmer","gender":"M"}
+{"user_id":115382,"age":34,"occupation":"sales/marketing","gender":"M"}
+{"user_id":11880,"age":26,"occupation":"K-12 student","gender":"M"}
+{"user_id":1175,"age":34,"occupation":"sales/marketing","gender":"F"}
+{"user_id":118939,"age":32,"occupation":"college/grad student","gender":"M"}
+{"user_id":118965,"age":86,"occupation":"artist","gender":"F"}
+{"user_id":123055,"age":36,"occupation":"academic/educator","gender":"M"}
+{"user_id":119149,"age":31,"occupation":"sales/marketing","gender":"M"}
+{"user_id":120740,"age":34,"occupation":"clerical/admin","gender":"F"}
+{"user_id":11999,"age":30,"occupation":"executive/managerial","gender":"M"}
+{"user_id":122123,"age":26,"occupation":"executive/managerial","gender":"M"}
+{"user_id":123746,"age":33,"occupation":"college/grad student","gender":"M"}
+{"user_id":123777,"age":33,"occupation":"scientist","gender":"M"}
+{"user_id":124186,"age":33,"occupation":"scientist","gender":"F"}
+{"user_id":125729,"age":32,"occupation":"other or not specified","gender":"M"}
+{"user_id":126681,"age":25,"occupation":"self-employed","gender":"M"}
+{"user_id":130819,"age":42,"occupation":"sales/marketing","gender":"M"}
+{"user_id":127593,"age":28,"occupation":"K-12 student","gender":"M"}
+{"user_id":127396,"age":50,"occupation":"clerical/admin","gender":"M"}
+{"user_id":131007,"age":26,"occupation":"executive/managerial","gender":"F"}
+{"user_id":12832,"age":31,"occupation":"scientist","gender":"M"}
+{"user_id":131172,"age":26,"occupation":"executive/managerial","gender":"M"}
+{"user_id":13175,"age":27,"occupation":"college/grad student","gender":"M"}
+{"user_id":131839,"age":33,"occupation":"executive/managerial","gender":"M"}
+{"user_id":134677,"age":28,"occupation":"college/grad student","gender":"M"}
+{"user_id":136244,"age":27,"occupation":"executive/managerial","gender":"M"}
+{"user_id":137341,"age":26,"occupation":"college/grad student","gender":"M"}
+{"user_id":137403,"age":33,"occupation":"scientist","gender":"M"}
+{"user_id":135928,"age":33,"occupation":"executive/managerial","gender":"M"}
+{"user_id":139407,"age":34,"occupation":"college/grad student","gender":"M"}
+{"user_id":140911,"age":26,"occupation":"self-employed","gender":"M"}
+{"user_id":141215,"age":28,"occupation":"executive/managerial","gender":"M"}
+{"user_id":142549,"age":18,"occupation":"K-12 student","gender":"M"}
+{"user_id":14583,"age":29,"occupation":"scientist","gender":"M"}
+{"user_id":147640,"age":30,"occupation":"sales/marketing","gender":"M"}
+{"user_id":143289,"age":26,"occupation":"scientist","gender":"M"}
+{"user_id":14620,"age":32,"occupation":"executive/managerial","gender":"M"}
+{"user_id":148610,"age":29,"occupation":"college/grad student","gender":"M"}
+{"user_id":149982,"age":29,"occupation":"college/grad student","gender":"M"}
+{"user_id":150321,"age":23,"occupation":"college/grad student","gender":"M"}
+{"user_id":150814,"age":27,"occupation":"college/grad student","gender":"M"}
+{"user_id":152464,"age":28,"occupation":"executive/managerial","gender":"M"}
+{"user_id":151068,"age":44,"occupation":"academic/educator","gender":"F"}
+{"user_id":152201,"age":31,"occupation":"K-12 student","gender":"M"}
+{"user_id":153284,"age":32,"occupation":"other or not specified","gender":"F"}
+{"user_id":154193,"age":28,"occupation":"executive/managerial","gender":"M"}
+{"user_id":154194,"age":69,"occupation":"K-12 student","gender":"F"}
+{"user_id":155894,"age":31,"occupation":"sales/marketing","gender":"M"}
+{"user_id":155934,"age":32,"occupation":"doctor/health care","gender":"M"}
+{"user_id":156765,"age":26,"occupation":"executive/managerial","gender":"M"}
+{"user_id":157821,"age":26,"occupation":"scientist","gender":"F"}
+{"user_id":156506,"age":29,"occupation":"other or not specified","gender":"M"}
+{"user_id":157824,"age":31,"occupation":"academic/educator","gender":"F"}
+{"user_id":158356,"age":29,"occupation":"K-12 student","gender":"M"}
+{"user_id":158321,"age":34,"occupation":"academic/educator","gender":"F"}
+{"user_id":161296,"age":29,"occupation":"artist","gender":"F"}
+{"user_id":15980,"age":28,"occupation":"college/grad student","gender":"F"}
+{"user_id":158853,"age":34,"occupation":"self-employed","gender":"M"}
+{"user_id":163696,"age":26,"occupation":"scientist","gender":"M"}
+{"user_id":163811,"age":28,"occupation":"sales/marketing","gender":"M"}
+{"user_id":161614,"age":25,"occupation":"executive/managerial","gender":"M"}
+{"user_id":17536,"age":26,"occupation":"clerical/admin","gender":"M"}
+{"user_id":1811,"age":25,"occupation":"programmer","gender":"M"}
+{"user_id":19401,"age":31,"occupation":"clerical/admin","gender":"M"}
+{"user_id":19489,"age":16,"occupation":"K-12 student","gender":"F"}
+{"user_id":19610,"age":26,"occupation":"college/grad student","gender":"F"}
+{"user_id":20860,"age":28,"occupation":"sales/marketing","gender":"M"}
+{"user_id":20995,"age":34,"occupation":"college/grad student","gender":"M"}
+{"user_id":21018,"age":30,"occupation":"executive/managerial","gender":"M"}
+{"user_id":21968,"age":27,"occupation":"self-employed","gender":"F"}
+{"user_id":25525,"age":29,"occupation":"sales/marketing","gender":"M"}
+{"user_id":23345,"age":27,"occupation":"sales/marketing","gender":"M"}
+{"user_id":26399,"age":26,"occupation":"college/grad student","gender":"M"}
+{"user_id":27934,"age":18,"occupation":"sales/marketing","gender":"M"}
+{"user_id":31122,"age":51,"occupation":"writer","gender":"M"}
+{"user_id":30046,"age":30,"occupation":"executive/managerial","gender":"M"}
+{"user_id":2817,"age":34,"occupation":"sales/marketing","gender":"M"}
+{"user_id":29438,"age":27,"occupation":"other or not specified","gender":"M"}
+{"user_id":31624,"age":28,"occupation":"executive/managerial","gender":"M"}
+{"user_id":32681,"age":79,"occupation":"retired","gender":"M"}
+{"user_id":33379,"age":26,"occupation":"scientist","gender":"M"}
+{"user_id":32117,"age":87,"occupation":"retired","gender":"F"}
+{"user_id":32962,"age":18,"occupation":"sales/marketing","gender":"M"}
+{"user_id":3353,"age":18,"occupation":"unemployed","gender":"M"}
+{"user_id":34670,"age":48,"occupation":"sales/marketing","gender":"M"}
+{"user_id":36478,"age":33,"occupation":"executive/managerial","gender":"M"}
+{"user_id":36499,"age":31,"occupation":"scientist","gender":"M"}
+{"user_id":38477,"age":27,"occupation":"other or not specified","gender":"M"}
+{"user_id":39368,"age":28,"occupation":"college/grad student","gender":"M"}
+{"user_id":3929,"age":28,"occupation":"executive/managerial","gender":"M"}
+{"user_id":39637,"age":31,"occupation":"college/grad student","gender":"M"}
+{"user_id":40729,"age":53,"occupation":"executive/managerial","gender":"M"}
+{"user_id":42274,"age":33,"occupation":"executive/managerial","gender":"M"}
+{"user_id":4163,"age":27,"occupation":"college/grad student","gender":"F"}
+{"user_id":40147,"age":26,"occupation":"academic/educator","gender":"F"}
+{"user_id":43178,"age":31,"occupation":"other or not specified","gender":"M"}
+{"user_id":48285,"age":28,"occupation":"executive/managerial","gender":"M"}
+{"user_id":45069,"age":28,"occupation":"college/grad student","gender":"M"}
+{"user_id":49566,"age":32,"occupation":"self-employed","gender":"F"}
+{"user_id":49792,"age":28,"occupation":"scientist","gender":"M"}
+{"user_id":52544,"age":27,"occupation":"college/grad student","gender":"M"}
+{"user_id":50016,"age":31,"occupation":"other or not specified","gender":"M"}
+{"user_id":52039,"age":29,"occupation":"sales/marketing","gender":"M"}
+{"user_id":49662,"age":28,"occupation":"scientist","gender":"M"}
+{"user_id":53288,"age":69,"occupation":"retired","gender":"F"}
+{"user_id":54871,"age":29,"occupation":"sales/marketing","gender":"M"}
+{"user_id":56685,"age":34,"occupation":"homemaker","gender":"M"}
+{"user_id":56716,"age":64,"occupation":"academic/educator","gender":"M"}
+{"user_id":57412,"age":27,"occupation":"other or not specified","gender":"M"}
+{"user_id":59853,"age":26,"occupation":"artist","gender":"F"}
+{"user_id":5936,"age":32,"occupation":"college/grad student","gender":"F"}
+{"user_id":59210,"age":33,"occupation":"other or not specified","gender":"M"}
+{"user_id":60966,"age":11,"occupation":"sales/marketing","gender":"M"}
+{"user_id":58447,"age":68,"occupation":"self-employed","gender":"F"}
+{"user_id":61330,"age":30,"occupation":"sales/marketing","gender":"M"}
+{"user_id":61971,"age":29,"occupation":"other or not specified","gender":"F"}
+{"user_id":62982,"age":31,"occupation":"sales/marketing","gender":"M"}
+{"user_id":63273,"age":32,"occupation":"customer service","gender":"M"}
+{"user_id":65181,"age":32,"occupation":"executive/managerial","gender":"M"}
+{"user_id":6334,"age":25,"occupation":"executive/managerial","gender":"M"}
+{"user_id":65293,"age":32,"occupation":"self-employed","gender":"M"}
+{"user_id":67028,"age":30,"occupation":"academic/educator","gender":"F"}
+{"user_id":67291,"age":33,"occupation":"scientist","gender":"M"}
+{"user_id":66628,"age":29,"occupation":"academic/educator","gender":"M"}
+{"user_id":68151,"age":32,"occupation":"executive/managerial","gender":"M"}
+{"user_id":68177,"age":26,"occupation":"self-employed","gender":"M"}
+{"user_id":70037,"age":28,"occupation":"sales/marketing","gender":"M"}
+{"user_id":70102,"age":31,"occupation":"college/grad student","gender":"M"}
+{"user_id":70143,"age":34,"occupation":"artist","gender":"M"}
+{"user_id":70519,"age":33,"occupation":"college/grad student","gender":"M"}
+{"user_id":73429,"age":30,"occupation":"college/grad student","gender":"M"}
+{"user_id":7356,"age":31,"occupation":"self-employed","gender":"M"}
+{"user_id":75642,"age":27,"occupation":"sales/marketing","gender":"M"}
+{"user_id":82020,"age":30,"occupation":"executive/managerial","gender":"M"}
+{"user_id":82473,"age":30,"occupation":"college/grad student","gender":"M"}
+{"user_id":83318,"age":30,"occupation":"college/grad student","gender":"M"}
+{"user_id":85325,"age":30,"occupation":"executive/managerial","gender":"M"}
+{"user_id":84877,"age":26,"occupation":"executive/managerial","gender":"F"}
+{"user_id":85987,"age":27,"occupation":"artist","gender":"M"}
+{"user_id":85256,"age":24,"occupation":"scientist","gender":"M"}
+{"user_id":88525,"age":33,"occupation":"sales/marketing","gender":"M"}
+{"user_id":90023,"age":30,"occupation":"executive/managerial","gender":"M"}
+{"user_id":94629,"age":31,"occupation":"scientist","gender":"F"}
+{"user_id":9547,"age":30,"occupation":"other or not specified","gender":"M"}
+{"user_id":95559,"age":25,"occupation":"sales/marketing","gender":"M"}
+{"user_id":98148,"age":28,"occupation":"college/grad student","gender":"M"}
+{"user_id":99609,"age":28,"occupation":"college/grad student","gender":"M"}
+{"user_id":98794,"age":34,"occupation":"academic/educator","gender":"M"}

@@ -1,5 +1,5 @@
 *.pyc
-venv
+Milestones/venv
 *.swp
 *~
 

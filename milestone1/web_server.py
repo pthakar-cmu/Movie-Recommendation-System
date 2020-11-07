@@ -7,12 +7,17 @@ app = Flask(__name__)
 # def index():
 #     return "Hello"
 
-
+resultGlobal = []
 
 @app.route('/recommend/<userid>')
 def index(userid):
-    return str(recommend(userid))
+
+    global resultGlobal
+
+    return str(recommend(userid, resultGlobal))
 
 if __name__ == '__main__':
+    print("Hey There")
+    resultGlobal = readFile()
     app.run( host="0.0.0.0", port="8082")
 

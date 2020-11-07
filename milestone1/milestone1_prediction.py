@@ -3,13 +3,14 @@
 # from surprise import Reader
 # from surprise import KNNWithMeans
 # from surprise import Dataset
+from datetime import datetime
 from random import sample
 import joblib
 import time
 # import re
 import csv
 import sys
-
+import time
 
 
 
@@ -24,12 +25,16 @@ import sys
 
 result = []
 
+def readFile():
+  return result
+
 def recommend(test_user):
   result = []
   start_time = time.time()
   filename = 'finalized_model.sav'
   algo = joblib.load(filename)
 
+  start = int(round(time.time() * 1000))
   with open('training_data.csv', newline='') as f:
     reader = csv.reader(f)
     lists = list(reader)
@@ -56,6 +61,7 @@ def recommend(test_user):
   else:
       result = sample(rating_item,20)
 
+  print("-> ",int(round(time.time() * 1000))-start)
   return ",".join(result)
 
 if __name__ == "__main__":

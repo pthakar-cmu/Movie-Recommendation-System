@@ -21,14 +21,12 @@ pipeline {
         stage('Install Dependencies') {
             steps {
                 echo 'Installing dependencies'
-		withEnv(["HOME=${env.WORKSPACE}"]) {
                 sh '''
                     #!/bin/sh
                     pip3 install -r ./CI/requirements.txt --user
 
                 '''
-		}
-            }    
+            }  
         }
 
         stage('Evaluate Code Quality') {

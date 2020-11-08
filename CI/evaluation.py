@@ -18,8 +18,8 @@ def read_json(name):
   return data
 
 def evaluate_model_offline(test_user):
-    movie_list = read_json('movie_set.json')
-    prediction_data = read_json('final_prediction.json')
+    movie_list = read_json('CI/movie_set.json')
+    prediction_data = read_json('CI/final_prediction.json')
 
     result = []
     if test_user in prediction_data:

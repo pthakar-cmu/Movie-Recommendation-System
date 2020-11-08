@@ -13,7 +13,7 @@ def preprocess_data(num_file):
         for ind_zero in range(5 - len(str(ind_file))):
             rating_file_name += "0"
         rating_file_name += str(ind_file)
-        rating_file = open('dataset/' + rating_file_name, "r")
+        rating_file = open('CI/dataset/' + rating_file_name, "r")
         rating_file_content = rating_file.readlines()
         for ind_line in range(len(rating_file_content)):
             seg = re.findall(r"'[ a-zA-Z._\-+*0-9]+'", rating_file_content[ind_line])
@@ -35,7 +35,7 @@ def preprocess_data(num_file):
         user_set = list(set(rating_user))
         movie_set = list(set(rating_item))
 
-        with open('movie_set.json', "w") as outfile:  
+        with open('CI/movie_set.json', "w") as outfile:  
             json.dump(movie_set, outfile) 
         
     return [rating_user, rating_item, rating, user_set, movie_set]

@@ -42,5 +42,5 @@ def train_model(rating_user, rating_item, rating, user_set, movie_set):
                 final_prediction[user_set[i]] = result
                 break
 
-    with open('final_prediction.json', "w") as outfile:  
+    with open('CI/final_prediction.json', "w") as outfile:  
         json.dump(final_prediction, outfile) 

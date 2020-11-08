@@ -23,7 +23,7 @@ pipeline {
                 echo 'Installing dependencies'
                 sh '''
                     #!/bin/sh
-                    pip3 install -r ./CI/requirements.txt --user
+                    sudo pip3 install -r ./CI/requirements.txt --user
 
                 '''
             }  

@@ -23,7 +23,8 @@ pipeline {
                 echo 'Installing dependencies'
 		withEnv(["HOME=${env.WORKSPACE}"]) {
                 sh '''
-                    virtualenv venv && . venv/bin/activate && 
+                    #!/bin/sh
+ 		    pip install --upgrade pip &&
                     pip3 install -r ./CI/requirements.txt --user
                 '''
 		}

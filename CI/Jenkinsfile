@@ -24,6 +24,7 @@ pipeline {
 		withEnv(["HOME=${env.WORKSPACE}"]) {
                 sh '''
                     #!/bin/sh
+		    pip3 install -U pip setuptools &&
                     pip3 install -r ./CI/requirements.txt --user
                 '''
 		}

@@ -11,7 +11,7 @@ pipeline {
                     #!/bin/sh
                     rm -rf
                 '''
-                git credentialsId: '0014', url: 'https://github.com/cmu-seai/movie-prediction-group-project-avengers.git'
+                git credentialsId: 'pthakar-cmu', url: 'https://github.com/cmu-seai/movie-prediction-group-project-avengers.git'
                 echo 'Code checked out successfully.'
             } // steps
         } // stage

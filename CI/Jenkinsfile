@@ -36,7 +36,7 @@ pipeline {
                         script: "python3 -m pytest --cov=./CI/ --cov-report=xml ./CI/"
                     )
                 }
-                cobertura coberturaReportFile: './CI/coverage.xml'
+                cobertura coberturaReportFile: 'coverage.xml'
                 echo 'Code quality check completed.'
             } // steps
         } // stage

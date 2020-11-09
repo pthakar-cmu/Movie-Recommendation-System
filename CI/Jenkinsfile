@@ -65,7 +65,7 @@ pipeline {
              steps {
                 sh '''
                     #!/bin/sh
-                    kill $(jobs -p)
+                    jobs -p | xargs kill
                 '''
                 
                 script {

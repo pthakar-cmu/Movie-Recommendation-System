@@ -1,0 +1,73 @@
+pipeline {
+   agent any
+    options {
+      timeout(time: 1, unit: 'HOURS') 
+    }
+    stages {
+        stage('Checkout Code') {
+            steps {
+                echo 'Starting code checkout stage.'
+                sh '''
+                    #!/bin/sh
+                    rm -rf
+                '''
+                git credentialsId: '17645', url: 'https://github.com/cmu-seai/movie-prediction-group-project-avengers.git'
+                echo 'Code checked out successfully.'
+            } // steps
+        } // stage
+
+        
+
+        stage('Install Dependencies') {
+            steps {
+                echo 'Installing dependencies'
+                sh '''
+                    #!/bin/sh
+                    pip3 install -r ./CI/requirements.txt --user
+
+                '''
+            }  
+        }
+
+        stage('Evaluate Code Quality') {
+            steps {
+                script {
+                    sh (
+                        script: "python3 -m pytest --cov=./CI/ --cov-report=xml ./CI/"
+                    )
+                }
+                cobertura coberturaReportFile: './CI/coverage.xml'
+                echo 'Code quality check completed.'
+            } // steps
+        } // stage
+        
+
+
+
+        stage('Build Model') {
+            steps {
+                script {
+                    try {
+                        sh (
+                            script: 'python3 ./CI/pipeline.py',
+                        )
+                        //plot csvFileName: 'plot_metric1.csv', csvSeries: [[file: 'plot_metric1.csv']], group: 'Measures', title: 'Offline Metric 1', style: 'line', yaxis: 'Metric 1'
+                        //plot csvFileName: 'plot_metric2.csv', csvSeries: [[file: 'plot_metric2.csv']], group: 'Measures', title: 'Offline Metric 2', style: 'line', yaxis: 'Metric 2'
+                    }
+                    catch (Exception e) {
+                        error ('There was an error while building the model.')
+                    }
+                }
+            } // steps
+        } // stage
+
+        // stage('Build & Deploy Prediction Service') {
+        //     steps {
+        //         script {
+
+        //         } // script
+        //     } // steps
+        // } // stage
+
+    } // stages
+} // pipeline

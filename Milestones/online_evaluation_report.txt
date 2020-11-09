@@ -1,0 +1,14 @@
+********** Online Metric Report **********
+
+***** Latency *****
+
+Mean: 			0.06ms
+Std: 			0.24
+Max: 			1ms
+Min: 			0ms
+90% quantile: 	0.0ms
+
+***** Number of requests *****
+
+Per minute: 0.35
+Per hour: 	21.25

@@ -63,11 +63,14 @@ pipeline {
 
         stage('Build & Deploy Prediction Service') {
              steps {
+                sh '''
+                    #!/bin/sh
+                    kill %1 
+                '''
                 script {
                     try {
                         sh (
-                            kill %1
-                            script: 'nohup python3 ./CI/prediction_deploy.py > CI/server.out &',
+                            script: 'kill %1 & nohup python3 ./CI/prediction_deploy.py > CI/server.out &',
                         )
                         
                     }

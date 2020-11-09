@@ -61,13 +61,23 @@ pipeline {
             } // steps
         } // stage
 
-        // stage('Build & Deploy Prediction Service') {
-        //     steps {
-        //         script {
+        stage('Build & Deploy Prediction Service') {
+             steps {
+                script {
+                    try {
+                        sh (
+                            kill %1
+                            script: 'nohup python3 ./CI/prediction_deploy.py > CI/server.out &',
+                        )
+                        
+                    }
+                    catch (Exception e) {
+                        error ('There was an error while deploy the prediction.')
+                    }
 
-        //         } // script
-        //     } // steps
-        // } // stage
+                 } // script
+             } // steps
+         } // stage
 
     } // stages
 } // pipeline

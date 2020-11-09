@@ -30,7 +30,7 @@ def evaluate_model_offline(test_user):
     else:
         print("random")
         result = sample(movie_list,20)
-    print(",".join(result))
+    return(",".join(result))
 
 
 

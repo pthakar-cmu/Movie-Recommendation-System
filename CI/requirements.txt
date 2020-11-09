@@ -8,3 +8,4 @@ pytest-cov
 scikit-learn==0.22.1
 scikit-surprise
 requests
+flask

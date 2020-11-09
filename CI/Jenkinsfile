@@ -63,10 +63,13 @@ pipeline {
 
         stage('Build & Deploy Prediction Service') {
              steps {
-                sh '''
+                try{
+                    sh '''
                     #!/bin/sh
                     kill %1 
-                '''
+                    '''
+                }
+                
                 script {
                     try {
                         sh (

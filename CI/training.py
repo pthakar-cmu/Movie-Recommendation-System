@@ -10,18 +10,8 @@ import json
 from surprise.model_selection import GridSearchCV, train_test_split
 from evaluation import get_metrics_summary, get_top_n, precision_recall_at_k
 
-def train_model(rating_user, rating_item, rating, user_set, movie_set):
-    ratings_dict = {
-        "item": rating_item,
-        "user": rating_user,
-        "rating": rating
-    }
-
-    # split dataset into traiing data and test data
-    df = pd.DataFrame(ratings_dict)
-    train_df = df.sample(frac=0.8, random_state=0)
-    test_df = df.drop(train_df.index)
-
+def train_model(train_df, test_df, df):
+    
     reader = Reader(rating_scale=(1, 5))
     train_data = Dataset.load_from_df(train_df[["user", "item", "rating"]], reader)
     test_data = Dataset.load_from_df(test_df[["user", "item", "rating"]], reader)

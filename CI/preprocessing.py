@@ -32,10 +32,22 @@ def preprocess_data(num_file):
 
         rating_file.close()
 
-        user_set = list(set(rating_user))
+        #user_set = list(set(rating_user))
         movie_set = list(set(rating_item))
 
         with open('CI/movie_set.json', "w") as outfile:  
             json.dump(movie_set, outfile) 
+
+    ratings_dict = {
+        "item": rating_item,
+        "user": rating_user,
+        "rating": rating
+    }
+
+    # split dataset into traiing data and test data
+    df = pd.DataFrame(ratings_dict)
+    train_df = df.sample(frac=0.8, random_state=0)
+    test_df = df.drop(train_df.index)
+    
         
-    return [rating_user, rating_item, rating, user_set, movie_set]
+    return [train_df, test_df, df]

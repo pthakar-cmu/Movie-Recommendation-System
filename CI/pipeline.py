@@ -6,14 +6,11 @@ from training import train_model
 from evaluation import evaluate_model_offline
 
 
-# Fetch data from Kafka stream
-num_file = get_data()
-
-# Preprocessing the data
-rating_user, rating_item, rating, user_set, movie_set = preprocess_data(num_file)
+# Preprocessing the data retched from Kafka stream
+train_df, test_df, df = preprocess_data(2)
 
 # train model
-train_model(rating_user, rating_item, rating, user_set, movie_set)
+train_model(train_df, test_df, df)
 
 # evaluate the model offline
 evaluate_model_offline(12345)

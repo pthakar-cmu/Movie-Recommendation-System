@@ -17,3 +17,4 @@ train_model(rating_user, rating_item, rating, user_set, movie_set)
 
 # evaluate the model offline
 evaluate_model_offline(12345)
+evaluate_model_offline(11880)

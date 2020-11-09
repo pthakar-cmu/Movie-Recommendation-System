@@ -4,7 +4,7 @@ def get_data():
 
     print("Data collected.")
 
-    return 5
+    return 2
 
 def updatae_data():
 

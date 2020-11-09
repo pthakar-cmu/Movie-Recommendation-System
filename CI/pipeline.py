@@ -1,6 +1,5 @@
 # This is dummy ml pipeline file for testing
 
-from data import get_data
 from preprocessing import preprocess_data
 from training import train_model
 from evaluation import evaluate_model_offline

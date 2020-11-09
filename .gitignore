@@ -1,5 +1,6 @@
 *.pyc
 Milestones/venv
+.idea
 *.swp
 *~
 

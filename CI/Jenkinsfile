@@ -61,13 +61,20 @@ pipeline {
             } // steps
         } // stage
 
-        stage('Build & Deploy Prediction Service') {
-             steps {
+
+        stage('Stop previous delpoyment') {
+            steps {
+                echo 'Kill all background jobs'
                 sh '''
                     #!/bin/sh
                     jobs -p | xargs kill
                 '''
-                
+            }  
+        }
+        
+
+        stage('Build & Deploy Prediction Service') {
+             steps {
                 script {
                     try {
                         sh (

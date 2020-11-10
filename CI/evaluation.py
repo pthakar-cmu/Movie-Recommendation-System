@@ -23,6 +23,8 @@ def evaluate_model_offline(algo, df):
     with open('CI/final_prediction.json', "w") as outfile:  
         json.dump(recommendations, outfile) 
 
+    return recommendations
+
 
 
 def precision_recall_at_k(predictions, k=20, threshold=3.5, epsilon=1e-7):

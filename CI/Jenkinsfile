@@ -65,7 +65,7 @@ pipeline {
 
         stage('Build & Deploy Prediction Service') {
              steps {
-                ssh 'JENKINS_NODE_COOKIE=dontKillMe nohup python3 ./CI/prediction_deploy.py > CI/server2.out &'
+                sh 'JENKINS_NODE_COOKIE=dontKillMe nohup python3 ./CI/prediction_deploy.py > CI/server2.out &'
              } // steps
          } // stage
 

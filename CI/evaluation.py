@@ -4,34 +4,24 @@ from random import randint,sample
 import pandas as pd
 import json
 import sys
+from surprise import Reader
+from surprise import KNNWithMeans
+from surprise import Dataset
 from collections import defaultdict
 
 
-def validate(test_user):
-  try:
-    int(test_user)
-    return True
-  except:
-    return False
+def evaluate_model_offline(algo, df):
+    # Recommendation lists
+    print('Get recommendations')
+    reader = Reader(rating_scale=(1, 5))
+    full_data = Dataset.load_from_df(df[["user", "item", "rating"]], reader)
+    known_data = full_data.build_full_trainset()
+    predict_data = known_data.build_anti_testset()
+    all_predictions = algo.test(predict_data)
+    recommendations = get_top_n(all_predictions, 20)
 
-def read_json(name):
-  with open(name) as f:
-    data = json.load(f)
-  return data
-
-def evaluate_model_offline(test_user):
-    movie_list = read_json('CI/movie_set.json')
-    prediction_data = read_json('CI/final_prediction.json')
-
-    result = []
-    if str(test_user) in prediction_data:
-        print("find it")
-        result = prediction_data[str(test_user)]
-    else:
-        print("random")
-        result = sample(movie_list,20)
-    return(",".join(result))
-
+    with open('CI/final_prediction.json', "w") as outfile:  
+        json.dump(recommendations, outfile) 
 
 
 

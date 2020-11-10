@@ -8,9 +8,9 @@ from surprise import Dataset
 import re
 import json
 from surprise.model_selection import GridSearchCV, train_test_split
-from evaluation import get_metrics_summary, get_top_n, precision_recall_at_k
+from evaluation import get_metrics_summary, precision_recall_at_k
 
-def train_model(train_df, test_df, df):
+def train_model(train_df, test_df):
     
     reader = Reader(rating_scale=(1, 5))
     train_data = Dataset.load_from_df(train_df[["user", "item", "rating"]], reader)
@@ -35,13 +35,6 @@ def train_model(train_df, test_df, df):
     metrics = precision_recall_at_k(val_predictions)
     get_metrics_summary(metrics, 'CI/user_info.csv', 'CI/offline_metrics_report_knn.txt', 'precision')
 
-    # Recommendation lists
-    print('Get recommendations')
-    full_data = Dataset.load_from_df(df[["user", "item", "rating"]], reader)
-    known_data = full_data.build_full_trainset()
-    predict_data = known_data.build_anti_testset()
-    all_predictions = algo.test(predict_data)
-    recommendations = get_top_n(all_predictions, 20)
+    return algo
 
-    with open('CI/final_prediction.json', "w") as outfile:  
-        json.dump(recommendations, outfile) 
+    

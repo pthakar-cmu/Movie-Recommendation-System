@@ -1,5 +1,5 @@
 from flask import Flask
-from evaluation import evaluate_model_offline, validate
+from prediction import recommend, validate
 import time
 
 app = Flask(__name__)
@@ -18,7 +18,7 @@ def index(userid):
         outputFileTrain.write('\n')
         return ""
 
-    result = str(evaluate_model_offline(userid))
+    result = str(recommend(userid))
 
     # Collecting Online Telemetry
     outputFileTrain.write(str(start_time)+","+userid+","

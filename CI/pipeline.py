@@ -9,8 +9,7 @@ from evaluation import evaluate_model_offline
 train_df, test_df, df = preprocess_data(2)
 
 # train model
-train_model(train_df, test_df, df)
+model = train_model(train_df, test_df)
 
 # evaluate the model offline
-evaluate_model_offline(12345)
-evaluate_model_offline(11880)
+evaluate_model_offline(model, df)

@@ -64,10 +64,12 @@ pipeline {
 
         stage('Stop previous delpoyment') {
             steps {
-                echo 'Kill all background jobs'
+                echo 'Kill previous delpoyment'
                 sh '''
                     #!/bin/sh
-                    jobs -p | xargs kill
+                    if pgrep python3; then 
+                        pkill python3
+                    fi
                 '''
             }  
         }
@@ -78,7 +80,7 @@ pipeline {
                 script {
                     try {
                         sh (
-                            script: 'kill %1 & nohup python3 ./CI/prediction_deploy.py > CI/server.out &',
+                            script: 'nohup python3 ./CI/prediction_deploy.py > CI/server.out &',
                         )
                         
                     }

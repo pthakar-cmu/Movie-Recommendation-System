@@ -12,4 +12,5 @@ def test_data():
                 assert isinstance(rating_user[i], int) == True   
                 assert isinstance(rating_item[i], str) == True
                 assert isinstance(rating[i], int)  == True
+                
 

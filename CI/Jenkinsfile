@@ -33,7 +33,7 @@ pipeline {
             steps {
                 script {
                     sh (
-                        script: "python3 -m pytest --cov=./CI/ --cov-report=xml ./CI/test_data.py"
+                        script: "python3 -m pytest --cov=./CI/ --cov-report=xml ./CI/pipeline_test/"
                     )
                 }
                 cobertura coberturaReportFile: 'coverage.xml'

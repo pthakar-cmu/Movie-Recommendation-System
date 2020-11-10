@@ -1,6 +1,13 @@
 import pytest 
 import pandas as pd
 import re
+import path
+import sys
+
+folder = path.path(__file__).abspath()
+sys.path.append(folder.parent.parent)
+
+
 from data import get_data
 
 def test_data():

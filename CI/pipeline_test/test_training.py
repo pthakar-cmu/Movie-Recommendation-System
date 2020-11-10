@@ -1,6 +1,13 @@
 import pytest 
 import pandas as pd
 import re
+import path
+import sys
+
+folder = path.path(__file__).abspath()
+sys.path.append(folder.parent.parent)
+
+
 from training import train_model
 import pandas as pd
 

@@ -1,6 +1,12 @@
 import pytest 
 import pandas as pd
 import re
+import path
+import sys
+
+folder = path.path(__file__).abspath()
+sys.path.append(folder.parent.parent)
+
 from preprocessing import preprocess_data
 
 def test_preprocessing():

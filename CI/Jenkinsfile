@@ -61,34 +61,11 @@ pipeline {
             } // steps
         } // stage
 
-
-        stage('Stop previous delpoyment') {
-            steps {
-                echo 'Kill previous delpoyment'
-                sh '''
-                    #!/bin/sh
-                    if pgrep python3; then 
-                        pkill python3
-                    fi
-                '''
-            }  
-        }
         
 
         stage('Build & Deploy Prediction Service') {
              steps {
-                script {
-                    try {
-                        sh (
-                            script: 'nohup python3 ./CI/prediction_deploy.py > CI/server.out &',
-                        )
-                        
-                    }
-                    catch (Exception e) {
-                        error ('There was an error while deploy the prediction.')
-                    }
-
-                 } // script
+                ssh 'JENKINS_NODE_COOKIE=dontKillMe nohup python3 ./CI/prediction_deploy.py > CI/server2.out &'
              } // steps
          } // stage
 

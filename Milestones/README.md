@@ -35,20 +35,3 @@ Run following commands to get .csv.
 	
 	python3 collect_and_clean_data/get_user_csv.py
 
-## Separate training and prediction
-
-If surprise libarary is not installed, please install it first:
-	
-	pip3 install scikit-surprise
-
-First, train the model with dataset once:
-
-	python3 milestone1_training.py
-
-It will generate recommended movies for all users in training dataset called "final_prediction.json" and a list of movies in training dataset called "movie_names.json".
-
-Then run predictions repeatly by accepting user ids:
-
-	python3 milestone1_prediction.py [user_id]
-	
-It will print out recommended list of 20 movies

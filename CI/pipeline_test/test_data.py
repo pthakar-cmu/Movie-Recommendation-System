@@ -1,12 +1,12 @@
 import pytest 
 import pandas as pd
 import re
-import path
+
+import os
 import sys
 
-folder = path.path(__file__).abspath()
-sys.path.append(folder.parent.parent)
-
+root_folder = os.path.abspath(os.path.dirname(os.path.dirname(os.path.abspath(__file__))))
+sys.path.append(root_folder)
 
 from data import get_data
 

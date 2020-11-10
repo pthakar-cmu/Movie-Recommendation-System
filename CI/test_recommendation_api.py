@@ -1,6 +1,7 @@
 import pytest 
 import requests
 
+
 def test_prediction_status():
 
         response = requests.get('http://128.2.205.5:8082/recommend/11880')

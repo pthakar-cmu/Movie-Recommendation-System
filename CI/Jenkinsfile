@@ -33,7 +33,7 @@ pipeline {
             steps {
                 script {
                     sh (
-                        script: "python3 -m pytest --cov=./CI/ --cov-report=xml ./CI/"
+                        script: "python3 -m pytest --cov=./CI/ --cov-report=xml ./CI/test_data.py"
                     )
                 }
                 cobertura coberturaReportFile: 'coverage.xml'
@@ -68,6 +68,17 @@ pipeline {
                 sh 'JENKINS_NODE_COOKIE=dontKillMe nohup python3 ./CI/prediction_deploy.py > CI/server2.out &'
              } // steps
          } // stage
+
+         stage('Evaluate API') {
+            steps {
+                script {
+                    sh (
+                        script: "python3 -m pytest --cov=./CI/ --cov-report=xml ./CI/test_recommendation_api.py"
+                    )
+                }
+                echo 'API check completed.'
+            } // steps
+        } // stage
 
     } // stages
 } // pipeline

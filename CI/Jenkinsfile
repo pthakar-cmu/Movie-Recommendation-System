@@ -52,12 +52,12 @@ pipeline {
                             script: 'python3 ./CI/pipeline.py',
                         )
                         plot csvFileName: 'plot_mean_precision.csv', csvSeries: [[file: 'plot_mean_precision.csv']], group: 'Measures', title: 'Offline Mean Precision', style: 'line', yaxis: 'Mean Precision'
-                        plot csvFileName: 'plot_F.csv', csvSeries: [[file: 'plot_F.csv']], group: 'Measures', title: 'Offline Presesion For Female', style: 'line', yaxis: 'Precision'
-                        plot csvFileName: 'plot_M.csv', csvSeries: [[file: 'plot_M.csv']], group: 'Measures', title: 'Offline Presesion For Male', style: 'line', yaxis: 'Precision'
-                        plot csvFileName: 'plot_0-20.csv', csvSeries: [[file: 'plot_0-20.csv']], group: 'Measures', title: 'Offline Presesion For Age 0-20', style: 'line', yaxis: 'Precision'
-                        plot csvFileName: 'plot_21-35.csv', csvSeries: [[file: 'plot_21-35.csv']], group: 'Measures', title: 'Offline Presesion For Age 21-35', style: 'line', yaxis: 'Precision'
-                        plot csvFileName: 'plot_36-50.csv', csvSeries: [[file: 'plot_36-50.csv']], group: 'Measures', title: 'Offline Presesion For Age 36-50', style: 'line', yaxis: 'Precision'
-                        plot csvFileName: 'plot_51+.csv', csvSeries: [[file: 'plot_51+.csv']], group: 'Measures', title: 'Offline Presesion For Age 51+', style: 'line', yaxis: 'Precision'
+                        plot csvFileName: 'plot_F.csv', csvSeries: [[file: 'plot_F.csv']], group: 'Measures', title: 'Offline Precision For Female', style: 'line', yaxis: 'Precision'
+                        plot csvFileName: 'plot_M.csv', csvSeries: [[file: 'plot_M.csv']], group: 'Measures', title: 'Offline Precision For Male', style: 'line', yaxis: 'Precision'
+                        plot csvFileName: 'plot_0-20.csv', csvSeries: [[file: 'plot_0-20.csv']], group: 'Measures', title: 'Offline Precision For Age 0-20', style: 'line', yaxis: 'Precision'
+                        plot csvFileName: 'plot_21-35.csv', csvSeries: [[file: 'plot_21-35.csv']], group: 'Measures', title: 'Offline Precision For Age 21-35', style: 'line', yaxis: 'Precision'
+                        plot csvFileName: 'plot_36-50.csv', csvSeries: [[file: 'plot_36-50.csv']], group: 'Measures', title: 'Offline Precision For Age 36-50', style: 'line', yaxis: 'Precision'
+                        plot csvFileName: 'plot_51+.csv', csvSeries: [[file: 'plot_51+.csv']], group: 'Measures', title: 'Offline Precision For Age 51+', style: 'line', yaxis: 'Precision'
                     }
                     catch (Exception e) {
                         error ('There was an error while building the model.')

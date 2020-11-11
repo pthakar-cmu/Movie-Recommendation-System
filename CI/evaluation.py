@@ -105,15 +105,27 @@ def write_offline_metrics_report(score, mean_score, gender_score, age_score, out
         file.write('********** Offline Metric Report **********')
         file.write('\n\n')
         file.write('Mean ' + score + ' Score: ' + str(mean_score))
+        metric = {'mean'+score: [mean_score]}
+        metric_df = pd.DataFrame(data=metric, index=[0])
+        metric_df.to_csv('plot_mean_'+ score +'.csv', index=False)
         file.write('\n\n')
         file.write('Group by Gender\n')
         for row in gender_score:
             file.write(row[0] + ': \t' + str(row[1]) + '\n')
+            metric = {row[0]: [row[1]]}
+            metric_df = pd.DataFrame(data=metric, index=[0])
+            metric_df.to_csv('plot_'+ row[0] +'.csv', index=False)
         file.write('\n')
         file.write('Group by Age\n')
         for row in age_score:
             file.write(row[0] + ': \t' + str(row[1]) + '\n')
+            metric = {row[0]: [row[1]]}
+            metric_df = pd.DataFrame(data=metric, index=[0])
+            metric_df.to_csv('plot_'+ row[0] +'.csv', index=False)
         file.write('\n')
+
+        
+
 
 
 def get_top_n(predictions, n=20):
